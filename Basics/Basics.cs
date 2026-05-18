@@ -1,8 +1,14 @@
 // Escribir en consola
 Console.WriteLine("Hola Mundo");
+// Escribir en consola (texto + variables)
+string name = "homo sapiens"
+Console.WriteLine("Hola " + name + "!");
+// Escribir en consola (variables dentro de texto)
+Console.WriteLine($"Como estas {name}?");
 
 // Tipos de variables
 int entero = 2; // Enteros
+decimal dec = 1.2345m; // Decimales (con 'm' al final del numero)
 float flotate = 1.2345F; // Decimales (con 'F' al final del numero)
 string palabra = "Hola Gente"; // Cadenas
 bool booleano = true; // Booleanos
