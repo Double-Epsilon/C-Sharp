@@ -6,6 +6,8 @@
 // ... virtual : Metodo que puede ser sobreescrito por una clase hija
 // ... override : Metodo que va a sobreescribir un metodo de la clase padre
 
+// ... static : Metodo que puede ser llamado sin instanciar un objeto de la respectiva clase
+
 // -------------------------------------------------------------------
 
 // Creamos un nuevo 'Sale'
@@ -30,6 +32,11 @@ Console.WriteLine(sale2.GetClassName());
 Console.WriteLine(sale1.GetProduct());
 // Llamar al metodo 'GetProduct' con parametros arrojara el resultado del metodo sobrecargado
 Console.WriteLine(sale1.GetProduct("TERRENEITOR"));
+
+
+// Llamar metodos de una clase sin instanciar un objeto (metodos estaticos)
+Welcomer.Welcome();
+Console.WriteLine(Welcomer.SayHello("pneumovolcaniosis or smthg"));
 
 
 // Clase padre
@@ -106,4 +113,17 @@ class SaleWithDiscount : Sale {
     public override string GetClassName () {
         return "Esta clase se llama 'SaleWithDiscount'";
     }
+}
+
+
+// Clase 'Welcomer'
+class Welcomer {
+    // Metodo estatico (no es necesario instanciar un objeto para utilizar este metodo)
+    public static void Welcome () {
+        Console.WriteLine("Hi! Im the Welcomer 2000!");
+    }
+
+    // Metodo de una sola linea
+    // Despues del '=>' se coloca el valor a retornar
+    public static string SayHello (string name) => "Hello " + name + "!";
 }
